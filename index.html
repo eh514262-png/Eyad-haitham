@@ -30,25 +30,34 @@
     from {background-position:0;}
     to {background-position:-1000px;}
   }
+  /* تعديل CSS لكلمة السر والزرار قريب من نص الشاشة */
   #passwordDiv {
-    margin-top:200px;
+    margin-top: 20vh; /* 20% من ارتفاع الشاشة العلوي */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
   input[type="password"] {
     padding:10px;
     font-size:16px;
     border-radius:5px;
     border:1px solid #ccc;
+    width: 80%; /* عرض مناسب لشاشة الموبايل */
+    max-width:300px; /* الحد الأقصى */
   }
   button {
     padding:10px 20px;
     font-size:16px;
-    margin-left:10px;
+    margin-top:10px; /* مسافة بين الباسورد والزرار */
     border-radius:5px;
     border:none;
     background-color:#ffcc00;
     color:#001a33;
     cursor:pointer;
     font-weight:bold;
+    width: 50%; /* يتناسب مع الشاشة */
+    max-width:150px;
   }
   #content {
     display:none;
