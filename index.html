@@ -1,7 +1,135 @@
-هدية لك 🌸 body { text-align: center; font-family: Arial, sans-serif; background-color: #ffe6f0; margin-top: 100px; } h1 { color: #ff3399; } p { color: #660066; font-size: 20px; } audio { margin-top: 20px; } 
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>هدية رمضان 🌙</title>
+<style>
+  body {
+    margin:0;
+    font-family: Arial, sans-serif;
+    text-align:center;
+    background-color:#001a33;
+    color:white;
+    overflow-x:hidden;
+  }
+  h1 {
+    font-size:2.5em;
+    color:#ffcc00;
+    margin-top:50px;
+    text-shadow: 0 0 10px #ffcc00;
+  }
+  #decor {
+    position:fixed;
+    top:0;
+    width:100%;
+    height:150px;
+    background: url('https://i.postimg.cc/Wz2S0d6J/ramadan-lights.png') repeat-x;
+    animation: move 10s linear infinite;
+  }
+  @keyframes move {
+    from {background-position:0;}
+    to {background-position:-1000px;}
+  }
+  #passwordDiv {
+    margin-top:200px;
+  }
+  input[type="password"] {
+    padding:10px;
+    font-size:16px;
+    border-radius:5px;
+    border:1px solid #ccc;
+  }
+  button {
+    padding:10px 20px;
+    font-size:16px;
+    margin-left:10px;
+    border-radius:5px;
+    border:none;
+    background-color:#ffcc00;
+    color:#001a33;
+    cursor:pointer;
+    font-weight:bold;
+  }
+  #content {
+    display:none;
+    margin-top:50px;
+  }
+  #dove {
+    font-size:100px;
+    cursor:pointer;
+    transition: transform 0.3s;
+    display:inline-block;
+    margin-top:20px;
+  }
+  #dove:hover {
+    transform: scale(1.3);
+  }
+  p.surah {
+    margin-top:20px;
+    font-size:18px;
+    line-height:1.6;
+    max-width:600px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:right;
+  }
+  footer {
+    margin-top:50px;
+    font-size:14px;
+    color:#cccccc;
+  }
+</style>
+</head>
+<body>
 
-🌸 إليك هذه الهدية 🌸
+<div id="decor"></div>
 
-أتمنى لك يوم رائع ومليء بالفرحة والسعادة!
+<h1>كل سنة وأنتم طيبين 🌙✨</h1>
 
-المتصفح لا يدعم تشغيل الموسيقى 
+<div id="passwordDiv">
+  <input type="password" id="passInput" placeholder="أدخل كلمة السر">
+  <button onclick="checkPass()">دخول</button>
+</div>
+
+<div id="content">
+  <h2>اضغط على الحمامة 🕊️ لتعرف رسالة خاصة</h2>
+  <div id="dove" onclick="showMessage()">🕊️</div>
+  <div id="message" style="margin-top:20px; display:none;">
+    <h3>أخويا: آدم هيثم</h3>
+    <p>رحمه الله، توفي يوم ٥ رمضان ٢٠٢٠ 🌹</p>
+    <h4>اقرأ الفاتحة</h4>
+    <p class="surah">
+      بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ <br>
+      الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ <br>
+      الرَّحْمَنِ الرَّحِيمِ <br>
+      مَالِكِ يَوْمِ الدِّينِ <br>
+      إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ <br>
+      اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ <br>
+      صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ
+    </p>
+  </div>
+</div>
+
+<footer>
+  جميع الحقوق محفوظة © أياد
+</footer>
+
+<script>
+function checkPass() {
+  const password = document.getElementById('passInput').value;
+  const content = document.getElementById('content');
+  if(password === "رمضان كريم") {
+    content.style.display = "block";
+    document.getElementById('passwordDiv').style.display = "none";
+  } else {
+    alert("كلمة السر خطأ!");
+  }
+}
+
+function showMessage() {
+  document.getElementById('message').style.display = "block";
+}
+</script>
+
+</body>
+</html>
